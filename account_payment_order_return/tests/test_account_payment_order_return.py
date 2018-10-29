@@ -60,7 +60,6 @@ class TestAccountPaymentOrderReturn(common.SavepointCase):
         })
         wizard = wizard_o.with_context(context).create({
             'order_id': self.payment_order.id,
-            'journal_ids': [(4, self.journal.id)],
             'allow_blocked': True,
             'date_type': 'move',
             'move_date': fields.Date.today(),
